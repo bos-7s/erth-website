@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173f32">
+  <title>اكتشف مسارك | ERTH</title>
+  <meta name="description" content="اختبار من 16 سؤالًا لاكتشاف المسار والدور الأقرب لك في إرث.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="إرث الرئيسية"><span class="brand-mark">إ</span><span>إرث <b>ERTH</b></span></a>
+  <nav><a href="/">الرئيسية</a><a href="/join">انضم إلى إرث</a></nav>
+</header>
+
+<main class="quiz-shell">
+  <section id="quizIntro" class="quiz-intro">
+    <span class="eyebrow">اكتشف مسارك / 01</span>
+    <h1>وين مكانك في إرث؟</h1>
+    <p class="lead">كل موهبة، لها دور.</p>
+    <p>اكتب اسمك، وبعدها جاوب على ١٦ موقفًا قصيرًا. في النهاية بتطلع لك نسبة كل مسار، ومعها الدور الإداري الأقرب لطريقة عملك.</p>
+
+    <div class="name-step">
+      <label for="studentName">اسمك</label>
+      <input id="studentName" type="text" maxlength="40" autocomplete="given-name" placeholder="مثال: عبدالله" aria-describedby="nameHelp nameError">
+      <p id="nameHelp" class="field-help">نستخدم الاسم فقط لتخصيص النتيجة داخل جهازك، ولا يتم إرساله أو حفظه في الموقع.</p>
+      <p id="nameError" class="field-error hidden" role="alert">اكتب اسمك أولًا عشان نبدأ.</p>
+      <button class="btn primary" id="startQuiz" type="button">ابدأ الاختبار ←</button>
+    </div>
+
+    <div class="quiz-note"><span>✓</span> النتيجة إرشادية وليست قرار قبول أو تعيين نهائي داخل ERTH.</div>
+  </section>
+
+  <section id="quizCard" class="quiz-card hidden" aria-live="polite">
+    <div class="quiz-top"><span id="questionCount"></span><span id="questionCategory"></span></div>
+    <div class="progress"><i id="progressBar"></i></div>
+    <p class="quiz-name">اختبار <strong id="quizName"></strong></p>
+    <h2 id="questionText"></h2>
+    <div id="choices" class="choice-list"></div>
+    <div class="quiz-nav"><button class="btn ghost" id="prevBtn" type="button">السابق</button><button class="btn primary" id="nextBtn" type="button" disabled>التالي ←</button></div>
+    <p class="micro">اختر الإجابة الأقرب لك فعلًا، ويمكنك الرجوع وتعديلها قبل ظهور النتيجة.</p>
+  </section>
+
+  <section id="results" class="results hidden">
+    <span class="eyebrow">RESULT / 02</span>
+    <h1><span id="resultName"></span>، هذا مسارك الأقرب</h1>
+    <p>النسب تقيس توافق إجاباتك مع الخيارات داخل الاختبار. مجموع المسارات ١٠٠٪، ومجموع الأدوار الإدارية ١٠٠٪.</p>
+
+    <div class="top-result track"><div><span>المسار الأقرب</span><h2 id="topTrack"></h2><p id="topTrackDesc"></p></div><strong id="topTrackPct"></strong></div>
+    <div class="top-result"><div><span>الدور الإداري الأقرب</span><h2 id="topRole"></h2><p id="topRoleDesc"></p></div><strong id="topRolePct"></strong></div>
+
+    <div class="result-grid">
+      <section><h3>توزيع المسارات</h3><div id="trackBars" class="bars"></div></section>
+      <section><h3>توزيع الأدوار الإدارية</h3><div id="roleBars" class="bars"></div></section>
+    </div>
+
+    <div class="result-tip"><strong>وش تسوي بالنتيجة؟</strong><p>خذ أعلى مسار وأعلى دور كنقطة بداية، وبعدها أكّد اختيارك في لقاء ERTH القصير إذا كنت محتارًا.</p></div>
+
+    <div class="actions result-actions"><button class="btn secondary dark-text" id="restartBtn" type="button">إعادة الاختبار</button><a class="btn primary" href="/join">الانتقال للتقديم</a></div>
+  </section>
+</main>
+
+<footer><div class="brand footer-brand"><span class="brand-mark">إ</span><span>إرث <b>ERTH</b></span></div><p>مساحة لكل موهبة، ومسؤولية لكل دور.</p><span>ERTH × أجيال</span></footer>
+<script src="/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/join", "destination": "/join.html" },
+    { "source": "/discover-role", "destination": "/discover-role.html" }
+  ]
+}
